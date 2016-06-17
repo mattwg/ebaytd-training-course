@@ -4,7 +4,7 @@ description : In this chapter you will find out how to push data into Teradata f
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:VideoExercise lang:r xp:50 skills:1
+--- type:VideoExercise lang:r xp:50 skills:1 key:f76c47fe1d
 
 ## Introduction to teradataFastload
 
