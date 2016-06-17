@@ -9,7 +9,7 @@ description : This chapter will help you familiarise yourself with connecting R 
 *** =video_link
 https://player.vimeo.com/video/170761929
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:60e8c1aa54
 ## Which one of these is NOT required to use the ebaytd package?
 
 *** =instructions
@@ -36,7 +36,7 @@ msg_success <- "Well done! The RODBC package is not required - we choose to use 
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad)) 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:9897d4051a
 ## Where should you go to get the latest version of the ebaytd package?
 
 *** =instructions
@@ -64,7 +64,7 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:31ae42d6fb
 ## Which one of these is NOT a reason to call teradataInit()?
 
 *** =instructions
@@ -90,7 +90,7 @@ msg_success <- "Good job! Since Hopper is designed for interactive work we set t
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad)) 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:991aca2e66
 ## What is the default Teradata system that ebaytd connects to?
 
 *** =instructions
@@ -116,7 +116,7 @@ msg_success <- "Exactly! This is an eBay specific package and is only available 
 test_mc(correct = 3, feedback_msgs = c(msg_bad, msg_bad, msg_success)) 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c3f760e056
 ## Does ebaytd() include functions to execute queries?
 
 *** =instructions
@@ -141,7 +141,7 @@ msg_success <- "That is right!  The ebaytd package has a dependency on the RJDBC
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success)) 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:7afffc1c38
 ## If you want to run a SQL query and get the results back into an R dataframe which DBI method would you use?
 
 *** =instructions
@@ -167,7 +167,7 @@ msg_success <- "That's correct!  dbGetQuery() will return the results of the SQL
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success,msg_bad)) 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:3c675cc7fe
 ## If you want to submit a CREATE TABLE query which DBI method would you use?
 
 *** =instructions
@@ -193,7 +193,7 @@ msg_success <- "Spot on!  dbSendQuery() is typically used for submitting DDL (da
 test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad, msg_bad)) 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ca086720ad
 ## When you are done and want to disconnect from Teradata what DBI method would you use?
 
 *** =instructions
