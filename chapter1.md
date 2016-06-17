@@ -4,7 +4,7 @@ description : This chapter will help you familiarise yourself with connecting R 
 
 --- type:VideoExercise lang:r xp:200 skills:1 key:f76c47fe1d
 
-## Getting started with the ebaytd package
+## Getting started with ebaytd
 
 *** =video_link
 https://player.vimeo.com/video/170761929
