@@ -4,37 +4,10 @@ description : This chapter will help you familiarise yourself with connecting R 
 
 --- type:VideoExercise lang:r xp:200 skills:1 key:f76c47fe1d
 
-## Getting started with ebaytd
+## Getting started with the ebaytd package
 
 *** =video_link
 https://player.vimeo.com/video/170761929
-
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:60e8c1aa54
-## Which one of these is NOT required to use the ebaytd package?
-
-*** =instructions
-- An up to date Java Virtual Machine
-- The RODBC package
-- The RJDBC package
-- A Teradata account
-
-*** =hint
-Remember the four steps - check out the ebaytd wiki page for more information.
-
-*** =sct
-```{r}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
-# testwhat R package
-
-msg_bad <- "That is not correct!"
-msg_success <- "Well done! The RODBC package is not required - we choose to use the RJDBC package since it works more effectively across multiuple platforms (Windows, Mac and Unix)."
-
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad)) 
-```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:9897d4051a
 ## Where should you go to get the latest version of the ebaytd package?
@@ -63,6 +36,32 @@ msg_success <- "Exactly! This is an eBay specific package and is only available 
 test_mc(correct = 3, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad)) 
 ```
 
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:60e8c1aa54
+## Which one of these is NOT required to use the ebaytd package?
+
+*** =instructions
+- An up to date Java Virtual Machine
+- The RODBC package
+- The RJDBC package
+- A Teradata account
+
+*** =hint
+Remember the four steps - check out the ebaytd wiki page for more information.
+
+*** =sct
+```{r}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# testwhat R package
+
+msg_bad <- "That is not correct!"
+msg_success <- "Well done! The RODBC package is not required - we choose to use the RJDBC package since it works more effectively across multiuple platforms (Windows, Mac and Unix)."
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad)) 
+```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:31ae42d6fb
 ## Which one of these is NOT a reason to call teradataInit()?
