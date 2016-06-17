@@ -11,7 +11,7 @@ attachments :
 *** =video_link
 https://player.vimeo.com/video/170761929
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:9bdcec69c0
 ## Where do you get the latest version of the ebaytd package?
 
 *** =instructions
