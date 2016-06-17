@@ -1,5 +1,5 @@
 ---
-title       : Upload data to TeraData - teradataFastload
+title       : Upload data to Teradata - teradataFastload
 description : In this chapter you will find out how to push data into Teradata from R
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
