@@ -1,0 +1,60 @@
+FILM ME
+
+Hi Folks - in this section of the course I want to show you the easy way to connect to ebay's teradata systems using the edbaytd package.
+
+ebaytd is a package designed to make it super easy for R users to connect in a consistent way to eBay Teradata systems.  Prior to this package it was common for some teams to write code connecting via RODBC and others to connect via RJDBC - many folks especially on Windows struggled getting RJDBC working.  This package also includes the Teradata JDBC jars - these were another pain to download and most users located these files in different directories. Both of these problems limited the ease with which code could be ported or shared across different operating systems and teams.
+
+If you search on the ebay wiki for 'ebaytd' you will find this page that has lots of information to get you started.  <Load wiki in browser> When you have completed this course please refer to the wiki for the latest package and documentation.
+
+TRANSITION TO SCREEN ONLY 
+
+There are four steps to using ebaytd.  
+
+STEP 1 - install RJDBC package in R - load in the usual way from CRAN.
+
+STEP 2 - Download the source package archive for ebaytd from here.  Once downloaded onto your machine you can use the RStudio Tools > Install Package menu to install this package.  Note that you will not be able to install the package from CRAN - you will need to select the install from package archive option.  
+
+You will need Java runtime to be installed on your machine for this to all work.  On the go/2r server the java stuff is already loaded - you will need to do this on your laptop or other machine.  Make sure that the Java runtime matches the version of R - if you have R 32 bit then you need Java runtime 32 bit, if you have R 64 bit then you need Java runtime 64 bit.  Chances are if you are running an modern machine, you installed 64-bit R. If you do not have the Java runtime then you will get errors when trying to connect.  Once installed restart your R session.  Get java here <show java.com in browser>.
+
+STEP 3 - Load the library in use the teradataInit() function to initialize the package with your Teradata login credentials. Make sure that these parameters are in quotes:
+
+> library(ebaytd)
+
+> teradataInit("YOUR_USER_NAME", "YOUR_TERADATA_PASSWORD")
+
+You only need to do this the first time you install the package on a new machine.  The only other time you need to run teradataInit() is when your Teradata password is updated.  This one time initialisation avoids requiring you to embed your TD credentials in scripts in future.  
+
+STEP 4 - Verify everything is working properly by executing, for example, the following code: 
+
+> conn <- teradataConnect() # make sure you have valid access to Hopper; 
+> dbGetQuery(conn,"select date")
+> dbDisconnect(conn)
+
+Let me walk you through those steps now.
+
+RSTUDIO 
+
+STEP 1 - RJDBC DEPENDECY
+STEP 2 - DOWNLOAD AND INSTALL PACKAGE
+STEP 3 - INITIALISE
+STEP 4 - TEST CONNECTION
+
+It is important to realise that the ebaytd package only manages the connection to Teradata - the underlying operations are provided by another package called DBI.  The two most common methods we use are dbGetQuery and dbSendQuery.  
+
+* dbGetQuery fetches results back from DBMS into a dataframe - typically used for select queries.
+* dbFetchQuery does not return data from the DBMS - it just sends a query to the database - typically used for submitting Data Definition Language (DDL) queries - such as ALTER, CREATE, DROP, DELETE
+
+HERE is an example using DBGetQuery.  Note that the results are returned in a normal data frame - which can be used just like anyother dataframe.
+
+HERE is an example of a DDL query - this time we do not expect to get a dataset back from the database - so we use the DBSendQuery command.
+
+You can read all about the DBI package using the online help in R ?DBI <show this in the browser>
+
+I want to reiterate that you do not need to include your TD credentials in order to connect or submit queries once you have initialisaed the package - the package takes care of this for you.
+
+BACK TO ME ON FILM 
+
+So that's it - I told you it was easy.  Remember to look at the wiki page for more details, the latest version of the package and examples showing ways to upload data to teradata.  
+
+To check your understanding we will now run a few exercises using ebaytd.
+

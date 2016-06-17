@@ -1,2 +1,4 @@
-# ebaytd-training-course
-eBay Teradata DataCamp course
+# Working with Teradata at ebay - the ebaytd package
+
+This is the ebaytd course for the eBay R Datacamp course.
+
